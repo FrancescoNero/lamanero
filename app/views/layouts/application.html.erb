@@ -1,14 +1,152 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js">
+
 <head>
-  <title>Lamanero</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <meta charset="utf-8"/>
+  <title>Lama Nero</title>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" media="all" href="css/style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+
+
+  <!-- JS -->
+  <script src="js/jquery-1.6.4.min.js"></script>
+  <script src="js/css3-mediaqueries.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/tabs.js"></script>
+
+  <!-- superfish -->
+  <link rel="stylesheet" media="screen" href="css/superfish.css" />
+  <script  src="js/superfish-1.4.8/js/hoverIntent.js"></script>
+  <script  src="js/superfish-1.4.8/js/superfish.js"></script>
+  <script  src="js/superfish-1.4.8/js/supersubs.js"></script>
+  <!-- ENDS superfish -->
+
+  <!-- prettyPhoto -->
+  <script  src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+  <link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css"  media="screen" />
+  <!-- ENDS prettyPhoto -->
+
+  <!-- poshytip -->
+  <link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
+  <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css"  />
+  <script  src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+  <!-- ENDS poshytip -->
+
+  <!-- GOOGLE FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Flex Slider -->
+  <link rel="stylesheet" href="css/flexslider.css" >
+  <script src="js/jquery.flexslider-min.js"></script>
+  <!-- ENDS Flex Slider -->
+
+  <!-- Less framework -->
+  <link rel="stylesheet" media="all" href="css/lessframework.css"/>
+
+  <!-- modernizr -->
+  <script src="js/modernizr.js"></script>
+
+  <!-- SKIN -->
+  <link rel="stylesheet" media="all" href="css/skin.css"/>
+
+
 </head>
-<body>
+
+<body lang="en">
+
+<header class="clearfix">
+
+  <div class="wrapper">
+    <a href="index.html" id="logo"><img  src="img/logo.png" alt="LamaNero"></a>
+
+    <nav>
+      <ul id="nav" class="sf-menu">
+        <li><a href="">LIVING</a></li>
+        <li><a href="">KITCHEN</a></li>
+        <li><a href="">BED</a></li>
+
+        <li style="float:right;"><a href="">STORES</a></li>
+        <li style="float:right;"><a href="">CONTACT US</a></li>
+
+      </ul>
+      <div id="combo-holder"></div>
+    </nav>
+
+  </div>
+</header>
 
 <%= yield %>
 
+<footer>
+  <div class="wrapper">
+
+    <ul  class="widget-cols clearfix">
+      <li class="first-col">
+
+        <div class="widget-block">
+          <h4>&nbsp;</h4>
+          <ul>
+            <li><a href="">About us</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Stores</a></li>
+
+          </ul>
+        </div>
+      </li>
+
+      <li class="second-col">
+
+        <div class="widget-block">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="">Top Selection</a></li>
+            <li><a href="">Designers</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">DNA</a></li>
+
+
+            <ul>
+        </div>
+
+      </li>
+
+      <li class="third-col">
+
+        <div class="widget-block">
+          <h4>&nbsp;</h4>
+          <ul>
+
+            <li><a href="">Services</a></li>
+            <li><a href="">Partners</a></li>
+            <li><a href="">Events</a></li>
+
+          </ul>
+        </div>
+
+      </li>
+
+    </ul>
+
+
+    <div class="footer-bottom">
+      <div class="left"></div>
+      <div class="right">
+        <ul id="social-bar">
+          <li><a href="#" title="Become a fan" class="poshytip"><img src="img/social/facebook.png"  alt="Facebook" /></a></li>
+          <li><a href="#" title="Follow my tweets" class="poshytip"><img src="img/social/twitter.png"  alt="twitter" /></a></li>
+          <li><a href="#" title="Add to the circle" class="poshytip"><img src="img/social/plus.png" alt="Google plus" /></a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
 </body>
+
 </html>
