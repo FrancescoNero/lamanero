@@ -1,17 +1,11 @@
 <!doctype html>
-<html class="no-js">
+<html>
 
 <head>
   <meta charset="utf-8"/>
-  <title>Lama Nero</title>
+  <title>LaMaNero</title>
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
   <link rel="stylesheet" media="all" href="css/style.css"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
-
 
   <!-- JS -->
   <script src="js/jquery-1.6.4.min.js"></script>
@@ -19,11 +13,10 @@
   <script src="js/custom.js"></script>
   <script src="js/tabs.js"></script>
 
-  <!-- superfish -->
+  <!-- superfish  (for the nav)-->
   <link rel="stylesheet" media="screen" href="css/superfish.css" />
   <script  src="js/superfish-1.4.8/js/hoverIntent.js"></script>
   <script  src="js/superfish-1.4.8/js/superfish.js"></script>
-  <script  src="js/superfish-1.4.8/js/supersubs.js"></script>
   <!-- ENDS superfish -->
 
   <!-- prettyPhoto -->
@@ -32,9 +25,9 @@
   <!-- ENDS prettyPhoto -->
 
   <!-- poshytip -->
-  <link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
+  <!--<link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
   <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css"  />
-  <script  src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>
+  <script  src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>-->
   <!-- ENDS poshytip -->
 
   <!-- GOOGLE FONTS -->
@@ -46,13 +39,10 @@
   <!-- ENDS Flex Slider -->
 
   <!-- Less framework -->
-  <link rel="stylesheet" media="all" href="css/lessframework.css"/>
+  <!--<link rel="stylesheet" media="all" href="css/lessframework.css"/>-->
 
   <!-- modernizr -->
   <script src="js/modernizr.js"></script>
-
-  <!-- SKIN -->
-  <link rel="stylesheet" media="all" href="css/skin.css"/>
 
 
 </head>
@@ -70,14 +60,15 @@
         <li><a href="">KITCHEN</a></li>
         <li><a href="">BED</a></li>
 
-        <li style="float:right;"><a href="">STORES</a></li>
-        <li style="float:right;"><a href="">CONTACT US</a></li>
+        <li class="right-item"><a href="">STORES</a></li>
+        <li class="right-item"><a href="">CONTACT US</a></li>
 
       </ul>
       <div id="combo-holder"></div>
     </nav>
 
   </div>
+
 </header>
 
 <%= yield %>
@@ -85,10 +76,10 @@
 <footer>
   <div class="wrapper">
 
-    <ul  class="widget-cols clearfix">
+    <ul  class="footer-cols clearfix">
       <li class="first-col">
 
-        <div class="widget-block">
+        <div class="footer-block">
           <h4>&nbsp;</h4>
           <ul>
             <li><a href="">About us</a></li>
@@ -101,7 +92,7 @@
 
       <li class="second-col">
 
-        <div class="widget-block">
+        <div class="footer-block">
           <h4>Our Products</h4>
           <ul>
             <li><a href="">Top Selection</a></li>
@@ -117,7 +108,7 @@
 
       <li class="third-col">
 
-        <div class="widget-block">
+        <div class="footer-block">
           <h4>&nbsp;</h4>
           <ul>
 
@@ -131,18 +122,6 @@
       </li>
 
     </ul>
-
-
-    <div class="footer-bottom">
-      <div class="left"></div>
-      <div class="right">
-        <ul id="social-bar">
-          <li><a href="#" title="Become a fan" class="poshytip"><img src="img/social/facebook.png"  alt="Facebook" /></a></li>
-          <li><a href="#" title="Follow my tweets" class="poshytip"><img src="img/social/twitter.png"  alt="twitter" /></a></li>
-          <li><a href="#" title="Add to the circle" class="poshytip"><img src="img/social/plus.png" alt="Google plus" /></a></li>
-        </ul>
-      </div>
-    </div>
 
   </div>
 </footer>
