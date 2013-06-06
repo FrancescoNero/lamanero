@@ -5,23 +5,21 @@
   <meta charset="utf-8"/>
   <title>LaMaNero</title>
 
-  <link rel="stylesheet" media="all" href="css/style.css"/>
+  <%= stylesheet_link_tag "style.css" %>
 
   <!-- JS -->
-  <script src="js/jquery-1.6.4.min.js"></script>
-  <script src="js/css3-mediaqueries.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="js/tabs.js"></script>
+  <%= javascript_include_tag "jquery-1.6.4.min.js" %>
+  <%= javascript_include_tag "custom.js" %>
 
   <!-- superfish  (for the nav)-->
-  <link rel="stylesheet" media="screen" href="css/superfish.css" />
-  <script  src="js/superfish-1.4.8/js/hoverIntent.js"></script>
-  <script  src="js/superfish-1.4.8/js/superfish.js"></script>
+  <%= stylesheet_link_tag "superfish.css" %>
+  <%= javascript_include_tag "superfish/js/hoverIntent.js" %>
+  <%= javascript_include_tag "superfish/js/superfish.js" %>
   <!-- ENDS superfish -->
 
   <!-- prettyPhoto -->
-  <script  src="js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-  <link rel="stylesheet" href="js/prettyPhoto/css/prettyPhoto.css"  media="screen" />
+  <%= stylesheet_link_tag "prettyPhoto/prettyPhoto.css" %>
+  <%= javascript_include_tag "prettyPhoto/js/jquery.prettyPhoto.js" %>
   <!-- ENDS prettyPhoto -->
 
   <!-- poshytip -->
@@ -34,15 +32,15 @@
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
 
   <!-- Flex Slider -->
-  <link rel="stylesheet" href="css/flexslider.css" >
-  <script src="js/jquery.flexslider-min.js"></script>
+  <%= stylesheet_link_tag "flexslider.css" %>
+  <%= javascript_include_tag "jquery.flexslider-min.js" %>
   <!-- ENDS Flex Slider -->
 
   <!-- Less framework -->
   <!--<link rel="stylesheet" media="all" href="css/lessframework.css"/>-->
 
   <!-- modernizr -->
-  <script src="js/modernizr.js"></script>
+  <%= javascript_include_tag "modernizr.js" %>
 
 
 </head>
@@ -52,8 +50,10 @@
 <header class="clearfix">
 
   <div class="wrapper">
-    <a href="index.html" id="logo"><img  src="img/logo.png" alt="LamaNero"></a>
-
+    <%= link_to image_tag("layout/logo.png"), home_index_path, :id => "logo" %>
+    <!-- <%= controller.controller_name %> we can use this parameter
+    to get the controller that is creating the view in order to color
+    the right label in the navigation info -->
     <nav>
       <ul id="nav" class="sf-menu">
         <li><a href="">LIVING</a></li>
@@ -71,7 +71,8 @@
 
 </header>
 
-<%= yield %>
+<!-- Shouldn't we wrap everything below before the footer in a a main class? -->
+  <%= yield %>
 
 <footer>
   <div class="wrapper">
@@ -101,7 +102,7 @@
             <li><a href="">DNA</a></li>
 
 
-            </ul>
+          </ul>
         </div>
 
       </li>
