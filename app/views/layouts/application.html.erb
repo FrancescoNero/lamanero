@@ -5,28 +5,13 @@
   <meta charset="utf-8"/>
   <title>LaMaNero</title>
 
+
   <%= stylesheet_link_tag "style.css" %>
 
   <!-- JS -->
   <%= javascript_include_tag "jquery-1.6.4.min.js" %>
   <%= javascript_include_tag "custom.js" %>
 
-  <!-- superfish  (for the nav)-->
-  <%= stylesheet_link_tag "superfish.css" %>
-  <%= javascript_include_tag "superfish/js/hoverIntent.js" %>
-  <%= javascript_include_tag "superfish/js/superfish.js" %>
-  <!-- ENDS superfish -->
-
-  <!-- prettyPhoto -->
-  <%= stylesheet_link_tag "prettyPhoto/prettyPhoto.css" %>
-  <%= javascript_include_tag "prettyPhoto/js/jquery.prettyPhoto.js" %>
-  <!-- ENDS prettyPhoto -->
-
-  <!-- poshytip -->
-  <!--<link rel="stylesheet" href="js/poshytip-1.1/src/tip-twitter/tip-twitter.css"  />
-  <link rel="stylesheet" href="js/poshytip-1.1/src/tip-yellowsimple/tip-yellowsimple.css"  />
-  <script  src="js/poshytip-1.1/src/jquery.poshytip.min.js"></script>-->
-  <!-- ENDS poshytip -->
 
   <!-- GOOGLE FONTS -->
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300' rel='stylesheet' type='text/css'>
@@ -35,9 +20,6 @@
   <%= stylesheet_link_tag "flexslider.css" %>
   <%= javascript_include_tag "jquery.flexslider-min.js" %>
   <!-- ENDS Flex Slider -->
-
-  <!-- Less framework -->
-  <!--<link rel="stylesheet" media="all" href="css/lessframework.css"/>-->
 
   <!-- modernizr -->
   <%= javascript_include_tag "modernizr.js" %>
@@ -54,8 +36,9 @@
     <!-- <%= controller.controller_name %> we can use this parameter
     to get the controller that is creating the view in order to color
     the right label in the navigation info -->
+
     <nav>
-      <ul id="nav" class="sf-menu">
+      <ul id="nav">
         <li><a href="">LIVING</a></li>
         <li><a href="">KITCHEN</a></li>
         <li><a href="">BED</a></li>
@@ -64,16 +47,23 @@
         <li class="right-item"><a href="">CONTACT US</a></li>
 
       </ul>
-      <div id="combo-holder"></div>
     </nav>
 
   </div>
 
 </header>
 
-<!-- Shouldn't we wrap everything below before the footer in a a main class? -->
-  <%= yield %>
 
+
+
+<!-- MAIN -->
+<div id="main">
+  <div class="wrapper">
+
+    <%= yield %>
+
+  </div>
+</div>
 <footer>
   <div class="wrapper">
 
