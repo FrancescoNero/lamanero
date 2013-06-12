@@ -2,85 +2,16 @@
 
 <!-- thumbs -->
 <div class="big-thumbs clearfix" >
+
+  <% @designers.each do |designer| %>
   <figure>
     <figcaption>
-      <strong>Bror Boije</strong>
-      <a href="project.html" class="opener"></a>
+      <strong> <%= designer.title %> </strong>
+      <%= link_to designer_path(designer), :class => 'opener' %>
     </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-1.jpg" alt="Alt text" /></a>
+    <%= link_to img_tag("/designers/#{designer.image_url})"), :class => 'thumb' %>
   </figure>
+  <% end %>
 
-  <figure>
-    <figcaption>
-      <strong>C-H Spak</strong>
-      <a href="project.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-2.jpg" alt="Alt text" /></a>
-  </figure>
-
-  <figure>
-    <figcaption>
-      <strong>Christine Schwarzer</strong>
-      <a href="project.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-3.jpg" alt="Alt text" /></a>
-  </figure>
-
-  <figure>
-    <figcaption>
-      <strong>Claesson Koivisto Rune</strong>
-      <a href="project.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-4.jpg" alt="Alt text" /></a>
-  </figure>
-
-  <figure>
-    <figcaption>
-      <strong>Corinna Warm</strong>
-      <a href="project.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-5.jpg" alt="Alt text" /></a>
-  </figure>
-
-  <figure>
-    <figcaption>
-      <strong>Isaac Chen</strong>
-      <a href="project.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-6.jpg" alt="Alt text" /></a>
-  </figure>
-
-  <figure>
-    <figcaption>
-      <strong>Katrin Olina</strong>
-      <a href="project.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-7.jpg" alt="Alt text" /></a>
-  </figure>
-
-  <figure>
-    <figcaption>
-      <strong>Marina Bautier</strong>
-      <a href="project.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-8.jpg" alt="Alt text" /></a>
-  </figure>
-
-  <figure>
-    <figcaption>
-      <strong>Arik Levy</strong>
-      <a href="designer.html" class="opener"></a>
-    </figcaption>
-
-    <a href="project.html"  class="thumb"><img src="images/all-designers-9.jpg" alt="Alt text" /></a>
-  </figure>
 </div>
 <!-- ends big-thumbs-->
