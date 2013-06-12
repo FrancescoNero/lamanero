@@ -237,34 +237,6 @@ nav {
 }
 
 
-.product-pager{
-    overflow: hidden;
-    margin: 0px;
-    margin-bottom: -30px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 24px;
-}
-
-.product-pager a{
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-}
-
-.product-pager a:hover{
-    text-decoration: none;
-}
-
-.product-pager .prev-product{
-    float: left;
-}
-
-.product-pager .next-product{
-    float: right;
-}
-
 /*
  * RETAILERS
  */
@@ -658,4 +630,3 @@ footer .wrapper {
     margin-right: 20px;
     font-size: 15px;
 }
-獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜哿獜꫿뢭

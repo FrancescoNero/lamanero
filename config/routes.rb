@@ -1,4 +1,14 @@
 Lamanero::Application.routes.draw do
+  get "admins/index"
+
+  get "infos/index"
+
+  get "designers/index"
+
+  get "retailers/index"
+
+  get "products/index"
+
   get "home/index"
 
   # The priority is based upon order of creation:
