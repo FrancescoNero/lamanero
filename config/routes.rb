@@ -1,4 +1,6 @@
 Lamanero::Application.routes.draw do
+  get "admins/index"
+
   get "infos/index"
 
   get "designers/index"
