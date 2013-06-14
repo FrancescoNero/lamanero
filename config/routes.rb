@@ -4,11 +4,11 @@ Lamanero::Application.routes.draw do
 
   get "infos/index"
 
-  get "designers/index"
-
   get "retailers/index"
 
   resources :products
+
+  resources :designers
 
   get "home/index"
 

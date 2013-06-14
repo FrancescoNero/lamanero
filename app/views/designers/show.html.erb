@@ -1,9 +1,10 @@
-<h2 class="page-heading"><span>Arik Levy</span></h2>
+<h2 class="page-heading"><span><%= @designer.title %></span></h2>
 
-<img src="images/designer.jpg" style="float: left; margin: 0 30px;" />
+<img src="<%= @designer.image.image_url(:big_thumb) %>" style="float: left; margin: 5px 30px;" />
 
 <h3>Bio</h3>
-<p>Innovation, simplicity and experimentation. Arik Levy is an industrial, interior and graphic designer or – if you want – both a scientist and a poet. His technical skills and creativity characterise his pieces.They deal with a variety of disciplines from product development, lighting designand corporate identity to packaging, point of purchase design, signage, exhibitions, interior and set designs.</p> <p>Arik Levy was born in Tel Aviv in 1963. At the age of 27, he left his own surfboard shop in Israel for Europe and graduated in Industrial Design from the Art Center Europe in Switzerland. After winning the Seiko Epson competition, Levy began his career as a professional designer in Japan.</p> <p>Since 1995 Arik Levy has been working with his colleague Pippo Lionni and a team of designers at their Paris-based company Ldesign. The company’s products are represented in the permanent collections of several institutes and museums. As one of the most interesting and innovative contemporary designers, Arik Levy was guest of honour to the Stockholm Furniture Fair 2011.</p>
+
+<%= @designer.biography.html_safe %>
 
 <div class="clearfix"></div>
 

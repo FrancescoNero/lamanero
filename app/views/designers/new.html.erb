@@ -1,0 +1,35 @@
+<h2 class="page-heading"><span>ADD NEW DESIGNER</span></h2>
+
+<!-- page content -->
+<div id="page-content" class="clearfix">
+
+
+  <%= form_for @designer, :html => { :id => "adminForm" } do |f| %>
+      <fieldset>
+        <div>
+          <%= f.label :title %><br />
+          <%= f.text_field :title, :title => 'Enter the designer name' %>
+        </div>
+        <div>
+          <%= f.label :biography %><br />
+          <%= f.text_area :biography, :rows => 5, :cols => 20, :title => 'Enter the designer biography' %>
+        </div>
+        <%= f.fields_for :image do |image_form|  %>
+            <div>
+              <%= image_form.label :alt %><br />
+              <%= image_form.text_field :alt %>
+            </div>
+            <div>
+              <%= image_form.label :image %><br />
+              <%= image_form.file_field :image %>
+            </div>
+        <% end %>
+        <p><%= f.submit %></p>
+  <% end %>
+  </fieldset>
+
+  <div class="clearfix"></div>
+  <!-- ENDS contact-sidebar -->
+
+</div>
+<!--  page content-->

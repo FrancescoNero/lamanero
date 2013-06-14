@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
 
   has_and_belongs_to_many :retailers
   has_and_belongs_to_many :designers
+  has_and_belongs_to_many :services
 
   has_many :images, :as => :attachable
 
