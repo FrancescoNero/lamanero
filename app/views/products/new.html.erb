@@ -1,0 +1,37 @@
+<h2 class="page-heading"><span>ADD NEW PRODUCT</span></h2>
+
+<!-- page content -->
+<div id="page-content" class="clearfix">
+
+
+  <%= nested_form_for @product, :html => { :id => "adminForm" } do |f| %>
+      <fieldset>
+        <div>
+          <%= f.label :title %><br />
+          <%= f.text_field :title, :id => "product-name", :title => 'Enter the product name' %>
+        </div>
+        <div>
+          <%= f.label :description %><br />
+          <%= f.text_area :description, :id => "product-desc", :rows => 5, :cols => 20, :title => 'Enter the product name' %>
+        </div>
+        <%= f.fields_for :images do |image_form|  %>
+            <div>
+              <%= image_form.label :alt %><br />
+              <%= image_form.text_field :alt %>
+            </div>
+            <div>
+              <%= image_form.label :image %><br />
+              <%= image_form.file_field :image %>
+            </div>
+            <%= image_form.link_to_remove "Remove this image" %>
+        <% end %>
+        <%= f.link_to_add "Add image", :images %>
+        <p><%= f.submit %></p>
+  <% end %>
+  </fieldset>
+
+  <div class="clearfix"></div>
+  <!-- ENDS contact-sidebar -->
+
+</div>
+<!--  page content-->

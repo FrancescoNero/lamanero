@@ -9,7 +9,7 @@
       <strong> <%= designer.title %> </strong>
       <%= link_to designer_path(designer), :class => 'opener' %>
     </figcaption>
-    <%= link_to img_tag("/designers/#{designer.image_url})"), :class => 'thumb' %>
+    <%= link_to image_tag("/designers/#{designer.image_url})"), :class => 'thumb' %>
   </figure>
   <% end %>
 

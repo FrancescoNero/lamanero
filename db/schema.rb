@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130612164059) do
+ActiveRecord::Schema.define(:version => 20130612210358) do
 
   create_table "designers", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(:version => 20130612164059) do
     t.integer "designer_id"
     t.integer "product_id"
   end
+
+  create_table "images", :force => true do |t|
+    t.text     "alt"
+    t.string   "image"
+    t.integer  "attachable_id"
+    t.string   "attachable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "images", ["attachable_id"], :name => "index_images_on_attachable_id"
 
   create_table "infos", :force => true do |t|
     t.string   "title"

@@ -11,15 +11,11 @@
   <!-- slider -->
   <div class="flexslider">
     <ul class="slides">
+      <% @product.images.each do |image| %>
       <li>
-        <img src="images/product-sofa1.jpg" alt="alt text" />
+        <%= image_tag image.image_url %>
       </li>
-      <li>
-        <img src="images/product-sofa2.jpg" alt="alt text" />
-      </li>
-      <li>
-        <img src="images/product-sofa3.jpg" alt="alt text" />
-      </li>
+      <% end %>
     </ul>
   </div>
   <!-- ENDS slider -->
