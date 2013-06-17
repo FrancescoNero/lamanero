@@ -1,6 +1,8 @@
 class RoomsController < ApplicationController
 
   def show
+    @room = Room.find(params[:id])
+
     @room_products = Room.find(params[:id]).products
 
     @products_with_images = Array.new
