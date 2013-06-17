@@ -7,10 +7,10 @@
       <li>
         <h3><%= link_to retailer.title, retailer_path(retailer) %></h3>
         <ul>
-          <li><span>Address:</span> <%= retailer.address %></li>
-          <li><span>City:</span> <%= retailer.city %></li>
-          <li><span>Tel.:</span> <%= retailer.telephone %></li>
-          <li><span>Email:</span> <%= retailer.email %></li>
+          <li><%= retailer.address %></li>
+          <li><%= retailer.city %></li>
+          <li><%= retailer.telephone %></li>
+          <li><%= retailer.email %></li>
         </ul>
       </li>
   <% end %>

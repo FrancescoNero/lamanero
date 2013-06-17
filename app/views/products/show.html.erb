@@ -11,11 +11,15 @@
   <!-- slider -->
   <div class="flexslider">
     <ul class="slides">
+
       <% @product.images.each do |image| %>
+
           <li>
             <%= image_tag image.image_url %>
           </li>
+
       <% end %>
+
     </ul>
   </div>
   <!-- ENDS slider -->
@@ -36,42 +40,48 @@
 
   <!-- product-infos -->
   <aside class="product-info">
-    <p>
-    <ul>
-      <strong>Designer</strong>
 
-      <% @product.designers.each do |designer| %>
-          <li><%= link_to designer.title, designer_path(designer) %></li>
-      <% end %>
-
-    </ul>
-    </p>
-
-    <p>
+    <% unless @product_designers.blank? %>
+        <h5>Designer</h5>
         <ul>
-            <strong>Services</strong>
 
-            <% @product.services.each do |service| %>
-            <li><%= link_to service.title, service_path(service) %></li>
-            <% end %>
+          <% @product_designers.each do |designer| %>
+              <li><%= link_to designer.title, designer_path(designer) %></li>
+          <% end %>
+
         </ul>
-    </p>
 
-    <p>
-    <ul>
-      <strong>In collaboration with</strong>
+    <% end %>
 
-      <% @product.partners.each do |partner| %>
-      <li><%= link_to partner.title, partner_path(partner) %></li>
-      <% end %>
+    <% unless @product_services.blank? %>
 
-    </ul>
-    </p>
+        <h5>Services</h5>
+        <ul>
 
-    <p>
-      <strong>Find this product at</strong>
-       <%= link_to 'our stores', retailers_product_path(params[:id]) %>
-    <p>
+          <% @product_services.each do |service| %>
+              <li><%= link_to service.title, service_path(service) %></li>
+          <% end %>
+
+        </ul>
+
+    <% end %>
+
+    <% unless @product_partners.blank? %>
+
+        <h5>In collaboration with</h5>
+        <ul>
+
+          <% @product_partners.each do |partner| %>
+              <li><%= link_to partner.title, partner_path(partner) %></li>
+          <% end %>
+
+        </ul>
+
+    <% end %>
+
+    <h5>Find this product at</h5>
+    <p><%= link_to 'our stores', retailers_product_path(params[:id]) %><p>
+
   </aside>
   <!-- END infos -->
 

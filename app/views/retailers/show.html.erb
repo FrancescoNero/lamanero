@@ -1,74 +1,71 @@
-				<h2 class="page-heading"><span><%= @retailer.title %></span></h2>
-					
-					
-				<!-- slider -->
-				<div class="flexslider">
-				  <ul class="slides">
-                    <% @retailer_images.each do |image| %>
-					<li>
-                      <%= image_tag image.image_url(:full_image) %>
-					</li>
-                    <% end %>
-				  </ul>
-				</div>
-				<!-- ENDS slider -->
-			
-			
-			
-				<div class="retailer-description">
-				
-					<h3>Description</h3>
-					<%= @retailer.description.html_safe %>
+<h2 class="page-heading"><span><%= @retailer.title %></span></h2>
 
-					<!-- Map -->
-					<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
-					<script type="text/javascript">
-						function initialize() {
-							var latlng = new google.maps.LatLng(51.512081, -0.136342);
-							var myOptions = {
-							  zoom: 8,
-							  center: latlng,
-							  mapTypeId: google.maps.MapTypeId.ROADMAP
-						};
-						var map = new google.maps.Map(document.getElementById("map_canvas"),
-							myOptions);
-						}
-					</script>
-			
-					<div id="map_canvas"></div>
-					<!-- ENDS Map -->
-					
-					
-							
-				</div>
-				
 
-			
-				<!-- retailer-infos -->	
-				<aside class="retailer-info">
-					<p>
-						<ul>
-							<strong>Where we are</strong>
-                          <ul>
-                            <li><%= @retailer.address %></li>
-                            <li><%= @retailer.city %></li>
-                            <li><span>Tel.:</span> <%= @retailer.telephone %></li>
-                            <li><span>Email:</span> <%= @retailer.email %></li>
-                          </ul>
-						</ul>
-					</p>
+<!-- slider -->
+<div class="flexslider">
+  <ul class="slides">
+    <% @retailer_images.each do |image| %>
+        <li>
+          <%= image_tag image.image_url(:full_image) %>
+        </li>
+    <% end %>
+  </ul>
+</div>
+<!-- ENDS slider -->
 
-					<% unless @retailer_services.blank? %>
-					<p>
-						<ul>
-							<strong>Services offered</strong>
-                            <% @retailer_services.each do |service| %>
-                            <li><%= link_to service.title, service_path(service) %></li>
-                            <% end %>
-						</ul>
-					</p>
-                    <% end %>
 
-				</aside>
-				<div class="clearfix"></div>
-				<!-- END infos -->
+
+<div class="retailer-description">
+
+  <h3>Description</h3>
+  <%= @retailer.description.html_safe %>
+
+  <!-- Map -->
+  <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript">
+      function initialize() {
+          var latlng = new google.maps.LatLng(51.512081, -0.136342);
+          var myOptions = {
+              zoom: 8,
+              center: latlng,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          var map = new google.maps.Map(document.getElementById("map_canvas"),
+                  myOptions);
+      }
+  </script>
+
+  <div id="map_canvas"></div>
+  <!-- ENDS Map -->
+
+
+
+</div>
+
+
+
+<!-- retailer-infos -->
+<aside class="retailer-info">
+
+    <h5>Where we are</h5>
+    <ul id="where">
+      <li><%= @retailer.address %></li>
+      <li><%= @retailer.city %></li>
+      <li><%= @retailer.telephone %></li>
+      <li><%= @retailer.email %></li>
+    </ul>
+
+  <% unless @retailer_services.blank? %>
+
+      <h5>Services offered</h5>
+      <ul>
+        <% @retailer_services.each do |service| %>
+            <li><%= link_to service.title, service_path(service) %></li>
+        <% end %>
+      </ul>
+
+  <% end %>
+
+</aside>
+<div class="clearfix"></div>
+<!-- END infos -->

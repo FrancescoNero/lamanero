@@ -2,13 +2,15 @@
 <!-- image-block -->
 <div class="image-block" >
 
+
+
   <!-- Rooms -->
   <h2 class="image-block-heading"><span>Rooms</span></h2>
   <div class="one-third-thumbs clearfix" >
 
     <figure>
       <figcaption>
-        <strong>Living Rooms</strong>
+        <span>Living Rooms</span>
       </figcaption>
 
       <a href="room-living.html"  class="thumb"><img src="images/home-living.jpg" alt="Living Room" /></a>
@@ -17,8 +19,7 @@
 
     <figure>
       <figcaption>
-        <strong>Kitchens</strong>
-        <a href="room-kitchen.html" class="opener"></a>
+        <span>Kitchens</span>
       </figcaption>
 
       <a href="room-kitchen.html"  class="thumb"><img src="images/home-kitchen.jpg" alt="Living Room" /></a>
@@ -26,16 +27,18 @@
 
     <figure class="last">
       <figcaption>
-        <strong>Bedrooms</strong>
-        <a href="room-bedroom.html" class="opener"></a>
+        <span>Bedrooms</span>
       </figcaption>
 
       <a href="room-bedroom.html"  class="thumb"><img src="images/home-bedroom.jpg" alt="Alt text" /></a>
     </figure>
 
-    <a href="rooms.html" class="more-link right">All rooms  &#8594;</a>
+    <%= link_to 'All rooms  &#8594;'.html_safe, rooms_path, :class => 'more-link right' %>
+
   </div>
   <!-- END Rooms -->
+
+
 
   <!-- Products -->
   <h2 class="image-block-heading"><span>Products</span></h2>
@@ -43,8 +46,7 @@
 
     <figure>
       <figcaption>
-        <strong>Chairs</strong>
-        <a href="products-chairs.html" class="opener"></a>
+        <span>Chairs</span>
       </figcaption>
 
       <a href="products-chairs.html"  class="thumb"><img src="images/home-chair.jpg" alt="Alt text" /></a>
@@ -52,8 +54,7 @@
 
     <figure>
       <figcaption>
-        <strong>Tables</strong>
-        <a href="products-tables.html" class="opener"></a>
+        <span>Tables</span>
       </figcaption>
 
       <a href="products-tables.html"  class="thumb"><img src="images/home-table.jpg" alt="Alt text" /></a>
@@ -61,8 +62,7 @@
 
     <figure>
       <figcaption>
-        <strong>Sofas</strong>
-        <a href="products-sofas.html" class="opener"></a>
+        <span>Sofas</span>
       </figcaption>
 
       <a href="products-sofas.html"  class="thumb"><img src="images/home-sofa.jpg" alt="Alt text" /></a>
@@ -70,8 +70,7 @@
 
     <figure class="last">
       <figcaption>
-        <strong>Lamps</strong>
-        <a href="products-lamps.html" class="opener"></a>
+        <span>Lamps</span>
       </figcaption>
 
       <a href="products-lamps.html"  class="thumb"><img src="images/home-lamp.jpg" alt="Alt text" /></a>

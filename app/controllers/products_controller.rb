@@ -32,6 +32,10 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @product_designers = @product.designers
+    @product_services = @product.services
+    @product_partners = @product.partners
+
   end
 
 end
