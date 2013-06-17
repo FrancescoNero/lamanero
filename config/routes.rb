@@ -6,13 +6,19 @@ Lamanero::Application.routes.draw do
 
   get "retailers/index"
 
-  resources :products
+  resources :products do
+    member do
+      get 'retailers'
+    end
+  end
 
   resources :designers
 
   resources :services
 
   resources :partners
+
+  resources :infos
 
   get "home/index"
 

@@ -3,13 +3,13 @@
 <!-- thumbs -->
 <div class="big-thumbs clearfix" >
 
-  <% @designers.each do |designer| %>
+  <% @designers_with_images.each do |designer| %>
   <figure>
     <figcaption>
-      <strong> <%= designer.title %> </strong>
-      <%= link_to designer_path(designer), :class => 'opener' %>
+      <strong> <%= designer.first.title %> </strong>
+      <%= link_to '', designer_path(designer.first), :class => 'opener' %>
     </figcaption>
-    <%= link_to image_tag("/designers/#{designer.image_url})"), :class => 'thumb' %>
+    <%= link_to image_tag("#{designer.second.image_url}"), designer_path(designer.first), :class => 'thumb' %>
   </figure>
   <% end %>
 

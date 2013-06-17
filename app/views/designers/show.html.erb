@@ -12,43 +12,20 @@
   <h2 class="image-block-heading" style="margin-top: 70px;"><span>Products</span></h2>
   <div class="one-fourth-thumbs clearfix">
 
-    <figure>
-      <figcaption>
-        <strong>Metrocubo</strong>
-        <a href="single.html" class="opener"></a>
-      </figcaption>
+    <% @designer.products.each do |product| %>
 
-      <a href="single.html"  class="thumb"><img src="images/designer-1.jpg" alt="Alt text" /></a>
-    </figure>
+        <figure>
+          <figcaption>
+            <strong><%= product.title %></strong>
+            <a href="single.html" class="opener"></a>
+            <%= link_to '', product_path(product), :class => 'opener' %>
+          </figcaption>
 
-    <figure>
-      <figcaption>
-        <strong>Prodotto</strong>
-        <a href="single.html" class="opener"></a>
-      </figcaption>
+          <%= link_to image_tag(product.images.first.image_url(:small_thumb)), product_path(product), :class => 'thumb' %>
+        </figure>
 
-      <a href="single.html"  class="thumb"><img src="images/designer-2.jpg" alt="Alt text" /></a>
-    </figure>
-
-    <figure>
-      <figcaption>
-        <strong>Altro Prodotto</strong>
-        <a href="single.html" class="opener"></a>
-      </figcaption>
-
-      <a href="single.html"  class="thumb"><img src="images/designer-3.jpg" alt="Alt text" /></a>
-    </figure>
-
-    <figure class="last">
-      <figcaption>
-        <strong>Ancora prodotto</strong>
-        <a href="single.html" class="opener"></a>
-      </figcaption>
-
-      <a href="single.html"  class="thumb"><img src="images/designer-4.jpg" alt="Alt text" /></a>
-    </figure>
+    <% end %>
 
   </div>
-
 </div>
-<!-- ENDS home-block -->
+<!-- ENDS image-block -->

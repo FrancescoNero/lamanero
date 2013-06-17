@@ -5,11 +5,9 @@
 
   <!-- floated content -->
   <div class="floated-content">
+    <h2 class="page-heading"><span><%= @first_info.title %></span></h2>
 
-    <h2 class="page-heading"><span>INFOS ABOUT THE COMPANY</span></h2>
-
-    <p>Lama Nero is a classic furniture producer with a strong anchor in both the public and domestic domain.</p> <p>Lama Nero's ideals are the same today as they have been for the past sixty years. These are to create beautiful furniture for the future, which build on the foundations of Scandinavian modern traditions, designed by forward-looking designers who share in the timeless ideals of architecture.</p> <p>Lama Nero was founded in 1945 by the two brothers Yngve and Jerker Ekström and Sven Bertil Sjöqvist, with Yngve leading the company until his death. The present owner of Lama Nero is Mrs. Elisabeth Johansson. The headquarters are located to Vaggeryd in Småland, Sweden, where one of the factories can be found. The second factory is located in Äng, a small village outside Nässjö, Sweden.</p> <p>Many modernist architects were universal designers with not only a clear understanding of designing houses, but also the interior, the furniture and almost the clothes the owners might wear. Lama Nero's founder, Yngve Ekström, was no exception. Together with names including Alvar Aalto, Bruno Mathsson, Arne Jacobsen and Poul Kjaerholm, Yngve Ekström was at the core of a generation of designers who made the concept "Scandinavian Modern" famous all over the world. With a keen eye, he designed Lama Nero's furniture, the head office building, logo, catalogues and personalised Christmas cards including their own poems. And so on.</p> <p>The most well known design of Yngve Ekström's extensive portfolio is the Lamino armchair from 1956, which is still manufactured and sold all over the world. In 1999 the Lamino was voted the Twentieth Century's Best Swedish Furniture Design by the Swedish interior design magazine Sköna Hem.</p>
-
+    <%= @first_info.description.html_safe %>
   </div>
   <!-- ends floated content -->
 
@@ -20,11 +18,10 @@
 
       <ul>
         <h4>More infos</h4>
-        <li><a href="info.html">Quality</a></li>
-        <li><a href="info.html">Environment</a></li>
-        <li><a href="info.html">Eco labeling</a></li>
-        <li><a href="info.html">Labeled with perfection</a></li>
-        <li><a href="info.html">Awards</a></li>
+
+        <% @infos.each do |info| %>
+            <li><%= link_to info.title, info_path(info) %></li>
+        <% end %>
 
       </ul>
 
