@@ -273,6 +273,10 @@ ul.retailers li p {
     color: #484848;
 }
 
+#adminForm div {
+    margin: 30px 5px;
+}
+
 #adminForm fieldset {
     width: 700px;
     margin: 0px auto;
@@ -325,8 +329,14 @@ ul.retailers li p {
     cursor: pointer;
 }
 
+#adminForm select {
+    padding: 3px 8px;
+    width: 500px;
+}
+
+
 #adminForm label {
-    padding: 7px 10px;
+    margin: 10px 10px 8px;
     color: #484848;
     display: block;
     font-size: 15px;

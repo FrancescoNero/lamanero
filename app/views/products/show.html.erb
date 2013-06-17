@@ -1,4 +1,4 @@
-<h2 class="page-heading"><span>Metrocubo</span></h2>
+<h2 class="page-heading"><span><%= @product.title %></span></h2>
 
 
 
@@ -12,9 +12,9 @@
   <div class="flexslider">
     <ul class="slides">
       <% @product.images.each do |image| %>
-      <li>
-        <%= image_tag image.image_url %>
-      </li>
+          <li>
+            <%= image_tag image.image_url %>
+          </li>
       <% end %>
     </ul>
   </div>
@@ -26,11 +26,10 @@
   <div class="product-description">
 
     <h3>Description</h3>
-    <p>A sofa can go beyond being merely a piece of furniture and become a room of its own within a room – this was the idea that prompted Arik Levy to design Metrocubo.</p> <p>With its unusually soft seat and backrest upholstery, as well as the high, flexible side and back panels, Metrocubo creates the frame for such a comfy, safe and secure world, a place for relaxed withdrawal from the hustle and bustle of life: Two people can stretch out and sit opposite each other, leaning leisurely back against the side walls, and if required the sofa also provide sufficient space for a third person. Metrocubo combines the contrasting qualities of a comfortable secluded relaxation area with an open invitation to enter and sit down.</p>
-
+    <%= @product.description.html_safe %>
 
     <h3>Technical Info</h3>
-    <p><strong>Sizes</strong>: all sofa styles are available in 2, 2½, 3, 3½ and 4 seater options. Matching armchairs and footstools are also available.</p> <p><strong>Construction</strong>: robust frame construction made from durable hardwoods, always birch or beech. Each sofa has a serpentine base with heavy gauge metal springs that go from the back to the front of the sofa.</p> <p><strong>Fabrics</strong>: a huge selection of fabrics to choose from including machine washable materials.</p> <p><strong>Covers and Fillings</strong>: fixed or tailored removable covers and a choice of fillings to suit you are available including, ‘Cold Cure’ Foam, Fibrefill, and Duck feather and Down. We offer a replacement cover service or you can order an extra set to change the look of the sofa within your colour scheme, for example for winter or summer looks. Options ~ armchairs, footstools, scatter cushions, protective arm caps and a choice of legs and castors are all available.</p>
+    <%= @product.tech_info.html_safe %>
 
   </div>
   <!-- ENDS product desc -->
@@ -39,26 +38,33 @@
   <aside class="product-info">
     <p>
     <ul>
-      <strong style="color: #444">Designer</strong><br/>
-      <li><a href="designer.html">Arik Levy</a></li>
+      <strong>Designer</strong>
+
+      <% @product.designers.each do |designer| %>
+          <li><%= link_to designer.title, designer_path(designer) %></li>
+      <% end %>
+
     </ul>
     </p>
 
     <p>
-    <ul>
-      <strong>Services</strong>
-      <li><a href="service.html">2 Days Warranty</a></li>
-      <li><a href="service.html">Assistance</a></li>
-      <li><a href="service.html">Personalization</a></li>
-    </ul>
+        <ul>
+            <strong>Services</strong>
+
+            <% @product.services.each do |service| %>
+            <li><%= link_to service.title, service_path(service) %></li>
+            <% end %>
+        </ul>
     </p>
 
     <p>
     <ul>
       <strong>In collaboration with</strong>
-      <li><a href="partner.html">Molteni</a></li>
-      <li><a href="partner.html">Swedese</a></li>
-      <li><a href="partner.html">Living</a></li>
+
+      <% @product.partners.each do |partner| %>
+      <li><%= link_to partner.title, partner_path(partner) %></li>
+      <% end %>
+
     </ul>
     </p>
 

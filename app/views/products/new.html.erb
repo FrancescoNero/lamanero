@@ -6,19 +6,43 @@
 
   <%= nested_form_for @product, :html => { :id => "adminForm" } do |f| %>
       <fieldset>
+
         <div>
-          <%= f.label :title %><br />
+          <%= f.label :title %>
           <%= f.text_field :title, :id => "product-name", :title => 'Enter the product name' %>
         </div>
+
         <div>
-          <%= f.label :description %><br />
-          <%= f.text_area :description, :id => "product-desc", :rows => 5, :cols => 20, :title => 'Enter the product name' %>
+          <%= f.label :description %>
+          <%= f.text_area :description, :id => "product-desc", :rows => 5, :cols => 20, :title => 'Enter the product\'s name' %>
         </div>
+
+        <div>
+          <%= f.label :technical_infos %>
+          <%= f.text_area :tech_info, :id => "product-tech", :rows => 5, :cols => 20, :title => 'Enter the product\'s  technical infos' %>
+        </div>
+
+        <div>
+          <%= f.label :designer %>
+          <%= f.collection_select 'designer_ids', @designers, :id, :title, {}, {:multiple => :true} %>
+        </div>
+
+        <div>
+          <%= f.label :retailer %>
+          <%= f.collection_select 'retailer_ids', @retailers, :id, :title, {}, {:multiple => :true} %>
+        </div>
+
+        <div>
+          <%= f.label :partner %>
+          <%= f.collection_select 'partner_ids', @partners, :id, :title, {}, {:multiple => :true} %>
+        </div>
+
+        <div>
+          <%= f.label :service %>
+          <%= f.collection_select 'service_ids', @services, :id, :title, {}, {:multiple => :true} %>
+        </div>
+
         <%= f.fields_for :images do |image_form|  %>
-            <div>
-              <%= image_form.label :alt %><br />
-              <%= image_form.text_field :alt %>
-            </div>
             <div>
               <%= image_form.label :image %><br />
               <%= image_form.file_field :image %>

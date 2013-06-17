@@ -9,6 +9,10 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @designers = Designer.all
+    @retailers = Retailer.all
+    @partners = Partner.all
+    @services = Service.all
   end
 
   def create

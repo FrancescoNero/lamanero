@@ -10,6 +10,10 @@ Lamanero::Application.routes.draw do
 
   resources :designers
 
+  resources :services
+
+  resources :partners
+
   get "home/index"
 
 
