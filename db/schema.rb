@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(:version => 20130617144447) do
   end
 
   create_table "categories_products", :id => false, :force => true do |t|
-    t.integer "categories_id"
-    t.integer "products_id"
+    t.integer "category_id"
+    t.integer "product_id"
   end
 
   create_table "designers", :force => true do |t|

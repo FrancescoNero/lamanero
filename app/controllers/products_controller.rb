@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
     @retailers = Retailer.all
     @partners = Partner.all
     @services = Service.all
+    @rooms = Room.all
+    @categories = Category.all
   end
 
   def create
