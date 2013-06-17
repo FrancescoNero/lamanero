@@ -1,6 +1,6 @@
 class Retailer < ActiveRecord::Base
   attr_accessible :description, :latitude, :longitude, :title, :address, :city, :telephone, :email,
-                  :images, :images_attributes
+                  :images, :images_attributes, :service_ids
 
   has_and_belongs_to_many :products
 

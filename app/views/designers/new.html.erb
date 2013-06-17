@@ -16,10 +16,6 @@
         </div>
         <%= f.fields_for :image do |image_form|  %>
             <div>
-              <%= image_form.label :alt %><br />
-              <%= image_form.text_field :alt %>
-            </div>
-            <div>
               <%= image_form.label :image %><br />
               <%= image_form.file_field :image %>
             </div>

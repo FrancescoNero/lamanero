@@ -1,0 +1,20 @@
+<h2 class="page-heading"><span>LIVING ROOM</span></h2>
+
+<div class="image-block">
+  <div class="one-fourth-thumbs clearfix">
+
+    <% @products_with_images.each do |product| %>
+    <figure>
+      <figcaption>
+        <strong><%= product.first.title %></strong>
+        <%= link_to '', product_path(product.first) %>
+      </figcaption>
+
+      <%= link_to (image_tag product.second.image_url(:small_thumb)), product_path(product.first)  %>
+    </figure>
+    <% end %>
+
+  </div>
+
+</div>
+<!-- ENDS image-block -->

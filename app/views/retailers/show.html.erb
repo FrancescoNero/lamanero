@@ -6,7 +6,6 @@
 				  <ul class="slides">
                     <% @retailer_images.each do |image| %>
 					<li>
-					  <img src="images/retailer.jpg" alt="alt text" />
                       <%= image_tag image.image_url(:full_image) %>
 					</li>
                     <% end %>

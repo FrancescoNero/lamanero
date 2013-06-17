@@ -41,12 +41,12 @@
 
     <nav>
       <ul id="nav">
-        <li><a href="">LIVING</a></li>
-        <li><a href="">KITCHEN</a></li>
-        <li><a href="">BED</a></li>
+        <li><%= link_to 'living', room_path(1) %></li>
+        <li><%= link_to 'kitchen', room_path(2) %></li>
+        <li><a href="">bed</a></li>
 
-        <li class="right-item"><a href="">STORES</a></li>
-        <li class="right-item"><a href="">CONTACT US</a></li>
+        <li class="right-item"><%= link_to 'stores', retailers_path %></li>
+        <li class="right-item"><a href="">contact us</a></li>
 
       </ul>
     </nav>
@@ -54,9 +54,6 @@
   </div>
 
 </header>
-
-
-
 
 <!-- MAIN -->
 <div id="main">
@@ -66,6 +63,7 @@
 
   </div>
 </div>
+
 <footer>
   <div class="wrapper">
 
@@ -89,8 +87,8 @@
           <h4>Our Products</h4>
           <ul>
             <li><a href="">Top Selection</a></li>
-            <li><a href="">Designers</a></li>
-            <li><a href="">Products</a></li>
+            <li><%= link_to 'Designers', designers_path %></li>
+            <li><%= link_to 'Products', products_path %></li>
             <li><a href="">DNA</a></li>
 
 
@@ -105,8 +103,8 @@
           <h4>&nbsp;</h4>
           <ul>
 
-            <li><a href="">Services</a></li>
-            <li><a href="">Partners</a></li>
+            <li><%= link_to 'Services', services_path %></li>
+            <li><%= link_to 'Partners', partners_path %></li>
             <li><a href="">Events</a></li>
 
           </ul>

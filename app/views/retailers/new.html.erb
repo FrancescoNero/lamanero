@@ -1,0 +1,64 @@
+<h2 class="page-heading"><span>ADD NEW retailer</span></h2>
+
+<!-- page content -->
+<div id="page-content" class="clearfix">
+
+
+  <%= nested_form_for @retailer, :html => { :id => "adminForm" } do |f| %>
+      <fieldset>
+
+        <div>
+          <%= f.label :name %>
+          <%= f.text_field :title, :id => "retailer-name", :title => 'Enter the retailer\'s name' %>
+        </div>
+
+        <div>
+          <%= f.label :address %>
+          <%= f.text_field :address, :id => "retailer-add", :rows => 5, :title => 'Enter the retailer\'s address' %>
+        </div>
+
+        <div>
+          <%= f.label :city %>
+          <%= f.text_field :city, :id => "retailer-city", :rows => 5, :title => 'Enter the retailer\'s city' %>
+        </div>
+
+        <div>
+          <%= f.label :telephone %>
+          <%= f.text_field :telephone, :id => "retailer-tel", :rows => 5, :title => 'Enter the retailer\'s telephone' %>
+        </div>
+
+        <div>
+          <%= f.label :email %>
+          <%= f.text_field :email, :id => "retailer-email", :rows => 5, :title => 'Enter the retailer\'s email' %>
+        </div>
+
+        <div>
+          <%= f.label :service %>
+          <%= f.collection_select :service_ids, @services, :id, :title, {}, {:multiple => :true} %>
+        </div>
+
+        <div>
+          <%= f.label :description %>
+          <%= f.text_area :description, :id => "retailer-desc", :rows => 5, :cols => 20, :title => 'Enter the retailer\'s description' %>
+        </div>
+
+        <div>
+          <%= f.fields_for :images do |image_form|  %>
+
+              <%= image_form.label :image %><br />
+              <%= image_form.file_field :image %>
+
+              <%= image_form.link_to_remove "Remove this image" %>
+          <% end %>
+          <%= f.link_to_add "Add image", :images %>
+        </div>
+
+        <p><%= f.submit %></p>
+  <% end %>
+  </fieldset>
+
+  <div class="clearfix"></div>
+  <!-- ENDS contact-sidebar -->
+
+</div>
+<!--  page content-->

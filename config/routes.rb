@@ -20,6 +20,7 @@ Lamanero::Application.routes.draw do
 
   resources :retailers
 
+  resources :rooms
 
 
   # The priority is based upon order of creation:
