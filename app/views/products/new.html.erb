@@ -43,6 +43,16 @@
         </div>
 
         <div>
+          <%= f.label :room %>
+          <%= f.collection_select :room_ids, @rooms, :id, :name, {}, {:multiple => :true} %>
+        </div>
+
+        <div>
+          <%= f.label :category %>
+          <%= f.collection_select :category_ids, @categories, :id, :name, {}, {:multiple => :true} %>
+        </div>
+
+        <div>
         <%= f.fields_for :images do |image_form|  %>
 
               <%= image_form.label :image %><br />
