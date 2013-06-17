@@ -69,7 +69,8 @@
     </p>
 
     <p>
-      <strong>Find this product at</strong> <br /><a href="product-retailer.html">our stores</a>
+      <strong>Find this product at</strong>
+       <%= link_to 'our stores', retailers_product_path(params[:id]) %>
     <p>
   </aside>
   <!-- END infos -->

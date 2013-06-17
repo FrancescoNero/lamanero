@@ -2,13 +2,11 @@ Lamanero::Application.routes.draw do
 
   get "admins/index"
 
-  get "infos/index"
-
-  get "retailers/index"
 
   resources :products do
     member do
       get 'retailers'
+      get 'living'
     end
   end
 
@@ -20,7 +18,7 @@ Lamanero::Application.routes.draw do
 
   resources :infos
 
-  get "home/index"
+  resources :retailers
 
 
 

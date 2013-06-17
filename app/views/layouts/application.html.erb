@@ -34,7 +34,7 @@
 <header class="clearfix">
 
   <div class="wrapper">
-    <%= link_to image_tag("layout/logo.png"), home_index_path, :id => "logo" %>
+    <%= link_to image_tag("layout/logo.png"), root_path, :id => "logo" %>
     <!-- <%= controller.controller_name %> we can use this parameter
     to get the controller that is creating the view in order to color
     the right label in the navigation info -->
@@ -75,7 +75,7 @@
         <div class="footer-block">
           <h4>&nbsp;</h4>
           <ul>
-            <li><a href="">About us</a></li>
+            <li><%= link_to 'About us', infos_path %></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Stores</a></li>
 

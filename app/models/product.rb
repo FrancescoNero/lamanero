@@ -9,5 +9,5 @@ class Product < ActiveRecord::Base
 
   has_many :images, :as => :attachable
 
-  accepts_nested_attributes_for :images, :designers, :retailers, :partners
+  accepts_nested_attributes_for :images
 end

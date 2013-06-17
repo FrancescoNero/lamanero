@@ -1,12 +1,15 @@
-				<h2 class="page-heading"><span>Showroom: East London</span></h2>						
+				<h2 class="page-heading"><span><%= @retailer.title %></span></h2>
 					
 					
 				<!-- slider -->
 				<div class="flexslider">
 				  <ul class="slides">
+                    <% @retailer_images.each do |image| %>
 					<li>
 					  <img src="images/retailer.jpg" alt="alt text" />
+                      <%= image_tag image.image_url(:full_image) %>
 					</li>
+                    <% end %>
 				  </ul>
 				</div>
 				<!-- ENDS slider -->
@@ -16,10 +19,8 @@
 				<div class="retailer-description">
 				
 					<h3>Description</h3>
-					<p>LamaNero Shop+Showroom in East London is a combination of a retail shop and a showroom.<br />Here you will find a large selection of the furniture from the LamaNero collection along with accessories from chosen suppliers.</p>
-					<p>Welcome!</p>		
-				
-				
+					<%= @retailer.description.html_safe %>
+
 					<!-- Map -->
 					<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
 					<script type="text/javascript">
@@ -49,29 +50,25 @@
 					<p>
 						<ul>
 							<strong>Where we are</strong>
-							<li>Golden House<br/>
-							30 Great Pulteney Street<br />
-							London W1F 9NN<br />
-							+46 8-660 93 01</li>
+                          <ul>
+                            <li><%= @retailer.address %></li>
+                            <li><%= @retailer.city %></li>
+                            <li><span>Tel.:</span> <%= @retailer.telephone %></li>
+                            <li><span>Email:</span> <%= @retailer.email %></li>
+                          </ul>
 						</ul>
 					</p>
-					
-					<p>
-						<ul>
-							<strong>Opening hours</strong>
-							<li>Monday–Friday 11 am–5 pm<br />
-							or by appointment</li>
-						</ul>
-					</p>
-					
+
+					<% unless @retailer_services.blank? %>
 					<p>
 						<ul>
 							<strong>Services offered</strong>
-							<li><a href="service.html">Interior design</a></li>
-							<li><a href="service.html">Personalization</a></li>
-							<li><a href="service.html">Soddisfatti o paccati</a></li>
+                            <% @retailer_services.each do |service| %>
+                            <li><%= link_to service.title, service_path(service) %></li>
+                            <% end %>
 						</ul>
 					</p>
+                    <% end %>
 
 				</aside>
 				<div class="clearfix"></div>
