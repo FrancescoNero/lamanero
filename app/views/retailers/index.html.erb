@@ -1,2 +1,78 @@
-<h1>Retailers#index</h1>
-<p>Find me in app/views/retailers/index.html.erb</p>
+				<h2 class="page-heading"><span>Showroom: East London</span></h2>						
+					
+					
+				<!-- slider -->
+				<div class="flexslider">
+				  <ul class="slides">
+					<li>
+					  <img src="images/retailer.jpg" alt="alt text" />
+					</li>
+				  </ul>
+				</div>
+				<!-- ENDS slider -->
+			
+			
+			
+				<div class="retailer-description">
+				
+					<h3>Description</h3>
+					<p>LamaNero Shop+Showroom in East London is a combination of a retail shop and a showroom.<br />Here you will find a large selection of the furniture from the LamaNero collection along with accessories from chosen suppliers.</p>
+					<p>Welcome!</p>		
+				
+				
+					<!-- Map -->
+					<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script>
+					<script type="text/javascript">
+						function initialize() {
+							var latlng = new google.maps.LatLng(51.512081, -0.136342);
+							var myOptions = {
+							  zoom: 8,
+							  center: latlng,
+							  mapTypeId: google.maps.MapTypeId.ROADMAP
+						};
+						var map = new google.maps.Map(document.getElementById("map_canvas"),
+							myOptions);
+						}
+					</script>
+			
+					<div id="map_canvas"></div>
+					<!-- ENDS Map -->
+					
+					
+							
+				</div>
+				
+
+			
+				<!-- retailer-infos -->	
+				<aside class="retailer-info">
+					<p>
+						<ul>
+							<strong>Where we are</strong>
+							<li>Golden House<br/>
+							30 Great Pulteney Street<br />
+							London W1F 9NN<br />
+							+46 8-660 93 01</li>
+						</ul>
+					</p>
+					
+					<p>
+						<ul>
+							<strong>Opening hours</strong>
+							<li>Monday–Friday 11 am–5 pm<br />
+							or by appointment</li>
+						</ul>
+					</p>
+					
+					<p>
+						<ul>
+							<strong>Services offered</strong>
+							<li><a href="service.html">Interior design</a></li>
+							<li><a href="service.html">Personalization</a></li>
+							<li><a href="service.html">Soddisfatti o paccati</a></li>
+						</ul>
+					</p>
+
+				</aside>
+				<div class="clearfix"></div>
+				<!-- END infos -->
