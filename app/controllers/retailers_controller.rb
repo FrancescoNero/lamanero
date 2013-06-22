@@ -1,4 +1,9 @@
 class RetailersController < ApplicationController
+
+  def index
+    redirect_to '/not_implemented.html'
+  end
+
   def show
     @retailer = Retailer.find(params[:id])
     @retailer_images = Retailer.find(params[:id]).images

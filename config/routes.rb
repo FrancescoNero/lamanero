@@ -1,5 +1,9 @@
 Lamanero::Application.routes.draw do
 
+
+  get '/contacts' => redirect('/not_implemented.html')
+  get '/events' => redirect('/not_implemented.html')
+
   resources :admins, :only => [:index]
 
   resources :categories, :only => [:index, :show]
@@ -10,7 +14,8 @@ Lamanero::Application.routes.draw do
 
   resources :partners, :only => [:index, :show]
 
-  get "products/top" =>  "products#top"
+  get 'products/top' => 'products#top'
+  get 'products/dna' => 'products#dna'
 
   resources :products, :only => [:index, :show, :create] do
 
@@ -21,7 +26,6 @@ Lamanero::Application.routes.draw do
   end
 
   resources :retailers, :only => [:index, :show, :new, :create]
-
 
   get "rooms/living" => "rooms#show", :id => "1"
   get "rooms/kitchen" => "rooms#show", :id => "2"

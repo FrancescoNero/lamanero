@@ -29,7 +29,7 @@
         <li<% if current_page?(room_path('bed')) -%> class="current-menu-item"<% end -%>><%= link_to 'bed', room_path('bed') %></li>
 
         <li class="right-item"><%= link_to 'stores', retailers_path %></li>
-        <li class="right-item"><a href="">contact us</a></li>
+        <li class="right-item"><%= link_to 'contacts', contacts_path %></li>
 
       </ul>
     </nav>
@@ -57,7 +57,7 @@
           <h4>&nbsp;</h4>
           <ul>
             <li><%= link_to 'About us', infos_path %></li>
-            <li><a href="">Contact</a></li>
+            <li><%= link_to 'Contacts', contacts_path %></li>
             <li><%= link_to 'Stores', retailers_path %></li>
 
           </ul>
@@ -69,10 +69,10 @@
         <div class="footer-block">
           <h4>Our Products</h4>
           <ul>
-            <li><a href="">Top Selection</a></li>
+            <li><%= link_to 'Top Products', products_top_path %></li>
             <li><%= link_to 'Designers', designers_path %></li>
             <li><%= link_to 'Products', products_path %></li>
-            <li><a href="">DNA</a></li>
+            <li><%= link_to 'DNA', products_dna_path %></li>
 
 
           </ul>
@@ -88,7 +88,7 @@
 
             <li><%= link_to 'Services', services_path %></li>
             <li><%= link_to 'Partners', partners_path %></li>
-            <li><a href="">Events</a></li>
+            <li><%= link_to 'Events', events_path %></li>
 
           </ul>
         </div>
