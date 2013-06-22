@@ -1,4 +1,5 @@
 class DesignersController < ApplicationController
+
   def index
     @designers_with_images = Array.new
 
@@ -24,6 +25,5 @@ class DesignersController < ApplicationController
   def show
     @designer = Designer.find(params[:id])
   end
-
 
 end

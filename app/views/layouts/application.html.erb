@@ -19,16 +19,14 @@
 <header class="clearfix">
 
   <div class="wrapper">
+
     <%= link_to image_tag("layout/logo.png"), root_path, :id => "logo" %>
-    <!-- <%= controller.controller_name %> we can use this parameter
-    to get the controller that is creating the view in order to color
-    the right label in the navigation info -->
 
     <nav>
       <ul id="nav">
-        <li<% if current_page?(room_path(1)) -%> class="current-menu-item"<% end -%>><%= link_to 'living', room_path(1) %></li>
-        <li<% if current_page?(room_path(2)) -%> class="current-menu-item" <% end -%>><%= link_to 'kitchen', room_path(2) %></li>
-        <li<% if current_page?(room_path(3)) -%> class="current-menu-item"<% end -%>><%= link_to 'bed', room_path(3) %></li>
+        <li<% if current_page?(room_path('living')) -%> class="current-menu-item"<% end -%>><%= link_to 'living', room_path('living') %></li>
+        <li<% if current_page?(room_path('kitchen')) -%> class="current-menu-item" <% end -%>><%= link_to 'kitchen', room_path('kitchen') %></li>
+        <li<% if current_page?(room_path('bed')) -%> class="current-menu-item"<% end -%>><%= link_to 'bed', room_path('bed') %></li>
 
         <li class="right-item"><%= link_to 'stores', retailers_path %></li>
         <li class="right-item"><a href="">contact us</a></li>

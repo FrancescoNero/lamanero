@@ -1,10 +1,7 @@
 class ProductsController < ApplicationController
-  def index
-    @products_with_images = Array.new
 
-    Product.all.each do |product|
-    @products_with_images << [product, product.images.first]
-    end
+  def index
+    redirect_to '/not_implemented.html'
   end
 
   def new
@@ -36,6 +33,10 @@ class ProductsController < ApplicationController
     @product_services = @product.services
     @product_partners = @product.partners
 
+  end
+
+  def top
+    redirect_to '/not_implemented.html'
   end
 
 end

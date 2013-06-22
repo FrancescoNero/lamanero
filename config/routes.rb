@@ -1,26 +1,35 @@
 Lamanero::Application.routes.draw do
 
-  get "admins/index"
+  resources :admins, :only => [:index]
 
+  resources :categories, :only => [:index, :show]
 
-  resources :products do
+  resources :designers, :only => [:index, :show, :new, :create]
+
+  resources :infos, :only => [:index, :show]
+
+  resources :partners, :only => [:index, :show]
+
+  get "products/top" =>  "products#top"
+
+  resources :products, :only => [:index, :show, :create] do
+
     member do
       get 'retailers'
-      get 'living'
     end
+
   end
 
-  resources :designers
+  resources :retailers, :only => [:index, :show, :new, :create]
 
-  resources :services
 
-  resources :partners
+  get "rooms/living" => "rooms#show", :id => "1"
+  get "rooms/kitchen" => "rooms#show", :id => "2"
+  get "rooms/bed" => "rooms#show", :id => "3"
 
-  resources :infos
+  resources :rooms, :only => [:index, :show]
 
-  resources :retailers
-
-  resources :rooms
+  resources :services, :only => [:index, :show]
 
 
   # The priority is based upon order of creation:

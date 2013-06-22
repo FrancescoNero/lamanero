@@ -273,7 +273,7 @@ ul.retailers > li ul {
 .image-block figure{
     float: left;
     margin-right: 7px;
-    margin-left: 8px;
+    margin-left: 8pxf;
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
@@ -453,8 +453,18 @@ footer .wrapper {
 
 
 /*
-** ADMIN FORM
+** ADMIN
 */
+
+ul.insert-list {
+   font-size: 15px;
+   list-style-type: square;
+   margin-left: 30px;
+}
+
+ul.insert-list li {
+    padding-bottom: 5px;
+}
 
 #adminForm{
     position: relative;
