@@ -88,7 +88,7 @@
   <div class="clearfix"></div>
 
   <% if @gt %>
-    <%= render "living_gt" %>
+    <%= render 'gt', :prev_prod => @prev_prod, :next_prod => @next_prod, :type => params[:gt], :index => @index %>
   <% end %>
 
 </div>

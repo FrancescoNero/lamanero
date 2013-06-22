@@ -10,16 +10,16 @@
 
     <figure>
       <figcaption>
-        <span>Living Rooms</span>
+        <span>Living</span>
       </figcaption>
 
-      <a href="<%= url_for room_path("living") %>"  class="thumb"><img src="<%= @living.image.image_url %>" alt="Living Room" /></a>
+      <a href="<%= url_for room_path("living") %>"  class="thumb"><img src="<%= @living.image.image_url %>" alt="Living" /></a>
 
     </figure>
 
     <figure>
       <figcaption>
-        <span>Kitchens</span>
+        <span>Kitchen</span>
       </figcaption>
 
       <a href="<%= url_for room_path("kitchen") %>" class="thumb"><img src="<%= @kitchen.image.image_url %>" alt="Kitchen" /></a>
@@ -27,10 +27,10 @@
 
     <figure class="last">
       <figcaption>
-        <span>Bedrooms</span>
+        <span>Bed</span>
       </figcaption>
 
-      <a href="<%= url_for room_path("bed") %>"  class="thumb"><img src="<%= @bed.image.image_url %>" alt="Bedrooms" /></a>
+      <a href="<%= url_for room_path("bed") %>"  class="thumb"><img src="<%= @bed.image.image_url %>" alt="Bed" /></a>
     </figure>
 
     <%= link_to 'All rooms  &#8594;'.html_safe, rooms_path, :class => 'more-link right' %>
@@ -49,7 +49,7 @@
         <span>Chairs</span>
       </figcaption>
 
-      <a href="<%= url_for category_path(1) %>"  class="thumb"><img src="images/home-chair.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path('chairs') %>"  class="thumb"><img src="<%= @chairs.image.image_url %>" alt="Chairs" /></a>
     </figure>
 
     <figure>
@@ -57,7 +57,7 @@
         <span>Tables</span>
       </figcaption>
 
-      <a href="<%= url_for category_path(2) %>"  class="thumb"><img src="images/home-table.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path('tables') %>"  class="thumb"><img src="<%= @tables.image.image_url %>" alt="Tables" /></a>
     </figure>
 
     <figure>
@@ -65,7 +65,7 @@
         <span>Sofas</span>
       </figcaption>
 
-      <a href="<%= url_for category_path(3) %>"  class="thumb"><img src="images/home-sofa.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path('sofas') %>"  class="thumb"><img src="<%= @sofas.image.image_url %>" alt="Sofas" /></a>
     </figure>
 
     <figure class="last">
@@ -73,7 +73,7 @@
         <span>Lamps</span>
       </figcaption>
 
-      <a href="<%= url_for category_path(4) %>"  class="thumb"><img src="images/home-lamp.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path('lamps') %>"  class="thumb"><img src="<%= @lamps.image.image_url %>" alt="Lamps" /></a>
     </figure>
     <a href="<%= url_for categories_path %>" class="more-link right">Products  &#8594;</a>
 

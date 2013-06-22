@@ -1,0 +1,19 @@
+<!-- image-block -->
+<div class="image-block" >
+  <!-- Categories -->
+  <h2 class="image-block-heading"><span>Products</span></h2>
+  <div class="one-fourth-thumbs clearfix">
+
+    <% @categories.each do |category| %>
+        <figure>
+          <figcaption>
+            <span><%= category.name %></span>
+          </figcaption>
+
+          <a href="<%= url_for category_path(category) %>"  class="thumb"><img src="<%= category.image.image_url %>" alt=<%= category.name %> /></a>
+        </figure>
+    <% end %>
+
+  </div>
+  <!-- END Categories -->
+</div>

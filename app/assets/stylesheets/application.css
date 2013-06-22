@@ -306,6 +306,7 @@ nav {
     height: 100%;
     background: #ea4c88;
     color: #f1f1f1;
+    text-transform: capitalize;
 }
 
 .opacity .image-block figure .opener{ display: none; }

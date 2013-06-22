@@ -1,0 +1,19 @@
+<!-- image-block -->
+<div class="image-block" >
+  <!-- Rooms -->
+  <h2 class="image-block-heading"><span>Rooms</span></h2>
+  <div class="one-third-thumbs clearfix" >
+    <% @rooms.each do |room| %>
+        <figure>
+          <figcaption>
+            <span><%= room.name %></span>
+          </figcaption>
+
+          <a href="<%= url_for room_path(room) %>"  class="thumb"><img src="<%= room.image.image_url %>" alt="<%= room.name %>" /></a>
+
+        </figure>
+    <% end %>
+
+  </div>
+</div>
+<!-- END Rooms -->

@@ -3,17 +3,17 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
 
-    @room_products = Room.find(params[:id]).products
+    room_products = Room.find(params[:id]).products
 
     @products_with_images = Array.new
 
-    @room_products.each do |product|
+    room_products.each do |product|
       @products_with_images << [product, product.images.first]
     end
   end
 
   def index
-    redirect_to '/not_implemented.html'
+    @rooms = Room.all
   end
 
 end
