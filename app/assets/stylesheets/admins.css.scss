@@ -1,3 +1,94 @@
 // Place all the styles related to the Admins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul.insert-list {
+  font-size: 15px;
+  list-style-type: square;
+  margin-left: 30px;
+}
+
+ul.insert-list li {
+  padding-bottom: 5px;
+}
+
+#adminForm{
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 18px;
+  color: #484848;
+}
+
+#adminForm div {
+  margin: 30px 5px;
+}
+
+#adminForm fieldset {
+  width: 700px;
+  margin: 0px auto;
+
+}
+
+#adminForm textarea,
+#adminForm input {
+  padding: 10px 15px;
+  background: #eaeaea;
+  color: #484848;
+  border: 1px  solid #ccc;
+  font-size: 13px;
+  font-family: Helvetica, Arial;
+  line-height: 1.5em;
+
+  overflow: auto;
+}
+
+#adminForm input:focus,
+#adminForm textarea:focus {
+  background: #eee;
+}
+
+#adminForm input[type="text"] {
+  overflow: auto;
+  width: 200px;
+  margin-bottom: 20px;
+
+  overflow: hidden;
+}
+
+#adminForm  textarea {
+  width: 90%;
+  height: 230px;
+}
+
+
+#adminForm input[type="submit"],
+#adminForm input[type="button"] {
+  margin: 21px 0px;
+  width: auto;
+  color: #444;
+  font-size: 11px;
+  background: #eaeaea;
+  padding: 3px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#adminForm select {
+  padding: 3px 8px;
+  width: 500px;
+}
+
+
+#adminForm label {
+  margin: 10px 10px 8px;
+  color: #484848;
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#adminForm p {
+  padding: 10px;
+}

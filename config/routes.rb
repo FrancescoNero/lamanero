@@ -17,7 +17,7 @@ Lamanero::Application.routes.draw do
   get 'products/top' => 'products#top'
   get 'products/dna' => 'products#dna'
 
-  resources :products, :only => [:index, :show, :create] do
+  resources :products, :only => [:index, :show, :new, :create] do
 
     member do
       get 'retailers'

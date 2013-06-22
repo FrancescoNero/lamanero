@@ -1,3 +1,41 @@
 // Place all the styles related to the Infos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.floated-content {
+  position: relative;
+  width: 700px;
+  float: left;
+  margin-right: 20px;
+}
+
+/*
+ * SIDEBAR
+ */
+
+#sidebar{
+  background: #e2e0d7;
+  position: relative;
+  width: 200px; /* 220 - 20 padding */
+  float: left;
+  padding: 20px 10px 20px 10px;
+  margin-bottom: 40px;
+  -webkit-box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+  -moz-box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+  -o-box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+  box-shadow: 2px 2px 0 rgba(0,0,0,.2);
+}
+
+#sidebar .block{
+  border-bottom: 1px solid #bcbcba;
+  margin-bottom: 18px;
+  padding-bottom: 5px;
+}
+
+#sidebar .block:last-child{
+  border-bottom: none;
+}
+
+#sidebar h4  {
+  margin-bottom: 10px;
+}
