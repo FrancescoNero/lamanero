@@ -1,6 +1,6 @@
 <!-- BY ROOM, 'CAUSE THERE'S ONLY THIS ONE BUT IT SHOULD BE MORE DIFFERENTIATED -->
 
-<h2 class="page-heading"><span>LIVING ROOM</span></h2>
+<h2 class="page-heading"><span>OUR PRODUCTS</span></h2>
 
 <div class="image-block">
   <div class="one-fourth-thumbs clearfix">
@@ -11,7 +11,7 @@
         <strong><%= product_image[0].title %></strong>
         <%= link_to "", product_path(product_image[0]), :class => "opener" %>
       </figcaption>
-      <%= link_to image_tag(product_image[1].image_url.to_s), product_path(product_image[0]), :class => "thumb" %>
+      <%= link_to image_tag(product_image[1].image_url(:small_thumb)), product_path(product_image[0]), :class => "thumb" %>
     </figure>
   <% end %>
 
