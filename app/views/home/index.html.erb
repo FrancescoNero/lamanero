@@ -13,7 +13,7 @@
         <span>Living Rooms</span>
       </figcaption>
 
-      <a href="room-living.html"  class="thumb"><img src="images/home-living.jpg" alt="Living Room" /></a>
+      <a href="<%= url_for room_path("living") %>"  class="thumb"><img src="<%= @living.image.image_url %>" alt="Living Room" /></a>
 
     </figure>
 
@@ -22,7 +22,7 @@
         <span>Kitchens</span>
       </figcaption>
 
-      <a href="room-kitchen.html"  class="thumb"><img src="images/home-kitchen.jpg" alt="Living Room" /></a>
+      <a href="<%= url_for room_path("kitchen") %>" class="thumb"><img src="<%= @kitchen.image.image_url %>" alt="Kitchen" /></a>
     </figure>
 
     <figure class="last">
@@ -30,7 +30,7 @@
         <span>Bedrooms</span>
       </figcaption>
 
-      <a href="room-bedroom.html"  class="thumb"><img src="images/home-bedroom.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for room_path("bed") %>"  class="thumb"><img src="<%= @bed.image.image_url %>" alt="Bedrooms" /></a>
     </figure>
 
     <%= link_to 'All rooms  &#8594;'.html_safe, rooms_path, :class => 'more-link right' %>
@@ -49,7 +49,7 @@
         <span>Chairs</span>
       </figcaption>
 
-      <a href="products-chairs.html"  class="thumb"><img src="images/home-chair.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path(1) %>"  class="thumb"><img src="images/home-chair.jpg" alt="Alt text" /></a>
     </figure>
 
     <figure>
@@ -57,7 +57,7 @@
         <span>Tables</span>
       </figcaption>
 
-      <a href="products-tables.html"  class="thumb"><img src="images/home-table.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path(2) %>"  class="thumb"><img src="images/home-table.jpg" alt="Alt text" /></a>
     </figure>
 
     <figure>
@@ -65,7 +65,7 @@
         <span>Sofas</span>
       </figcaption>
 
-      <a href="products-sofas.html"  class="thumb"><img src="images/home-sofa.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path(3) %>"  class="thumb"><img src="images/home-sofa.jpg" alt="Alt text" /></a>
     </figure>
 
     <figure class="last">
@@ -73,9 +73,9 @@
         <span>Lamps</span>
       </figcaption>
 
-      <a href="products-lamps.html"  class="thumb"><img src="images/home-lamp.jpg" alt="Alt text" /></a>
+      <a href="<%= url_for category_path(4) %>"  class="thumb"><img src="images/home-lamp.jpg" alt="Alt text" /></a>
     </figure>
-    <a href="products-types.html" class="more-link right">Products  &#8594;</a>
+    <a href="<%= url_for categories_path %>" class="more-link right">Products  &#8594;</a>
 
   </div>
 
