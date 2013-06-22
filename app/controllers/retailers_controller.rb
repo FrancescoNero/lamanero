@@ -1,7 +1,7 @@
 class RetailersController < ApplicationController
 
   def index
-    redirect_to '/not_implemented.html'
+    @retailers = Retailer.all
   end
 
   def show

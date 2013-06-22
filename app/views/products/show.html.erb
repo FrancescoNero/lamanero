@@ -87,7 +87,9 @@
 
   <div class="clearfix"></div>
 
-  <%= render "living_gt" %>
+  <% if @gt %>
+    <%= render "living_gt" %>
+  <% end %>
 
 </div>
 <!--  ENDS product content-->

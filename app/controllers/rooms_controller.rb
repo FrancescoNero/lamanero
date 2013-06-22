@@ -10,7 +10,10 @@ class RoomsController < ApplicationController
     @room_products.each do |product|
       @products_with_images << [product, product.images.first]
     end
+  end
 
+  def index
+    redirect_to '/not_implemented.html'
   end
 
 end

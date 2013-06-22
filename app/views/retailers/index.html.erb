@@ -1,0 +1,13 @@
+<ul class="retailers">
+<% @retailers.each do |retailer| %>
+    <li>
+      <h3><%= link_to retailer.title, retailer_path(retailer) %></h3>
+      <ul>
+        <li><%= retailer.address %></li>
+        <li><%= retailer.city %></li>
+        <li><%= retailer.telephone %></li>
+        <li><%= retailer.email %></li>
+      </ul>
+    </li>
+<% end %>
+</ul>

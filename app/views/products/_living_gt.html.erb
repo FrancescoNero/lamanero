@@ -1,1 +1,5 @@
-<%= link_to "home" root_path %>
+<div class="gt">
+<%= link_to "&#8592 prev" .html_safe, product_path(@prev_prod, :gt => "living"), :class => "left" %>
+<%= link_to "&#8593 back to index" .html_safe, room_path(1)  %>
+<%= link_to "&#8594 next" .html_safe, product_path(@next_prod, :gt => "living"), :class => "right" %>
+</div>

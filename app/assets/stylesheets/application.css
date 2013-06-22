@@ -8,6 +8,341 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require reset
  *= require_self
  *= require_tree .
  */
+
+/**
+*	GENERAL
+*/
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #888;
+}
+
+body,
+.image-block-heading span,
+.page-heading span{
+    background: #ebebe8;
+}
+
+body a:hover,
+#nav>li>a:hover {
+    color: #ea4c88;
+}
+
+body p{
+    margin-bottom: 21px;
+}
+
+body a{
+    text-decoration: none;
+    color: #444;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+    font-weight: 400;
+    color: #444;
+}
+
+h1{ font-size: 48px;}
+
+h2{ font-size: 36px; }
+
+h3{ font-size: 24px; }
+
+h4{ font-size: 21px; }
+
+h5{ font-size: 18px; }
+
+h6{ font-size: 14px; }
+
+strong { font-weight: bold; }
+
+#main, footer, aside{ line-height: 1.5em; }
+
+
+.wrapper {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.right:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+footer, aside{
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+.page-heading {
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 35px;
+    background: url('layout/div-line.png') repeat-x center center;
+}
+
+.page-heading span{
+    padding: 0 20px;
+    margin-left: 20px;
+}
+
+.more-link{
+    margin-bottom: 0;
+}
+
+
+aside, canvas, figure, figure img, footer, header, nav, section {
+    display: block;
+}
+
+.clearfix{ clear:both; }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+
+
+/*
+ * HEADER & NAVIGATION
+ */
+
+header {
+    background: #444 url(layout/header.png) bottom left repeat-x;
+}
+
+#logo {
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+nav {
+    margin-top: 0;
+    height: 30px;
+}
+
+
+#nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#nav>li>a {
+    color: #E2E0D7;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    display: block;
+    overflow: hidden;
+    padding: 0 0 7px 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .6);
+}
+
+
+#nav>li.current-menu-item>a,
+#nav>li.current_page_item>a {
+    border-bottom: solid #ebebe8 5px;
+    color: #E2E0D7;
+}
+
+#nav>li.right-item {
+    float:right;
+}
+
+
+
+/*
+ * MAIN
+ */
+
+#main{
+    padding-top: 40px;
+    background: url(layout/oblique-lines.png) repeat-x;
+    margin-bottom: 60px;
+}
+
+
+
+/*
+ * GUIDED TOUR
+ */
+
+.gt {
+    text-align: center;
+}
+
+
+/*
+ * PRODUCT & RETAILER
+ */
+
+.product-description, .retailer-description {
+    float: left;
+    width: 700px;
+    margin: -40px 20px 70px 30px;
+}
+
+.product-description h3, .retailer-description h3 {
+    margin: 40px 5px 20px;
+}
+
+.product-info, .retailer-info {
+    float: left;
+    width: 150px;
+    margin-bottom: 70px;
+}
+
+.product-info h5, .retailer-info h5 {
+    margin: 15px 0 5px;
+}
+
+.retailer-info ul#where {
+    list-style-type: none;
+}
+
+.retailer-info ul#where li {
+    margin-left: 10px;
+}
+
+.product-info ul, .retailer-info ul, #sidebar ul {
+    list-style-type: square;
+}
+
+.product-info li, .retailer-info li, #sidebar li {
+    margin-left: 20px;
+}
+
+
+/*
+ * IMAGE-BLOCK
+ */
+
+.image-block {
+    margin-bottom: 20px;
+}
+
+.image-block-heading{
+    text-align: center;
+    margin-bottom: 40px;
+    background: url(layout/div-line.png) repeat-x center center;
+}
+
+.image-block-heading span{
+    padding: 0 20px;
+}
+
+.image-block figure{
+    float: left;
+    margin-right: 7px;
+    margin-left: 8pxf;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    line-height: 1.2em;
+
+    -webkit-box-shadow: 0 0 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 2px rgba(0,0,0,.2);
+    -o-box-shadow: 0 0 2px rgba(0,0,0,.2);
+    box-shadow: 0 0 2px rgba(0,0,0,.2);
+}
+
+.image-block figure .thumb{
+    display: block;
+}
+
+.image-block figure img{
+    max-width: 100%;
+    opacity: .999;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.image-block figure a:hover img{
+    opacity: 0.1;
+    line-height: 0em;
+}
+
+
+.image-block figure.last{
+    margin-right: 0;
+}
+
+.image-block figcaption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ea4c88;
+    color: #f1f1f1;
+}
+
+.opacity .image-block figure .opener{ display: none; }
+
+.one-third-thumbs figure{ width: 300px; }
+
+.one-fourth-thumbs figure{ width: 220px; }
+
+
+/*
+ * FOOTER
+ */
+
+footer .wrapper{
+    background: url(layout/footer.png) repeat-x top center;
+}
+
+footer .wrapper {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    border-bottom: 15px solid #ccc;
+}
+
+
+.footer-cols h4{
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 21px;
+}
+
+.footer-cols {
+    text-align: center;
+}
+
+.footer-cols>li{
+    width: 293px;
+    float: left;
+    margin-right: 20px;
+    font-size: 15px;
+}

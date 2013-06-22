@@ -10,7 +10,7 @@
         <span><%= product.first.title %></span>
       </figcaption>
 
-      <%= link_to (image_tag product.second.image_url(:small_thumb)), product_path(product.first)  %>
+      <%= link_to (image_tag product.second.image_url(:small_thumb)), product_path(product.first, :gt => "living")  %>
     </figure>
 
     <% end %>
