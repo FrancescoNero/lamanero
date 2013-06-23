@@ -1,4 +1,6 @@
 <div class="gt">
+<p>You are browsing: <%= type %></p>
+  <br>
 <%= link_to "&#8592 prev" .html_safe, product_path(prev_prod, :gt => type), :class => "left" %>
 <%= link_to "&#8593 back to index" .html_safe, index  %>
 <%= link_to "next &#8594" .html_safe, product_path(next_prod, :gt => type), :class => "right" %>

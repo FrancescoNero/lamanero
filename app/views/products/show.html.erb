@@ -15,7 +15,7 @@
       <% @product.images.each do |image| %>
 
           <li>
-            <%= image_tag image.image_url %>
+            <%= image_tag image.image_url(:full_image) %>
           </li>
 
       <% end %>
