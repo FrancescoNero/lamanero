@@ -7,4 +7,4 @@
 3. Go to localhost:3000
 
 == Notes
-Imagemagick is used by the application. Ensure your system has it installed and available on the PATH. Obviously a ruby on rails environment is also required.
+Imagemagick is used by the application. Ensure your system has it installed and available on the PATH. Obviously a ruby on rails environment is also required. Tested on ruby 2.0.0 and rails 4.0.2. To access the administration page go to /admins.
